@@ -12,7 +12,7 @@ public class Cards(ILogger<Cards> logger)
     private readonly ILogger<Cards> _logger = logger;
 
     [Function("cards")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req,
+    public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req,
     [BlobInput("test/cards.json")] Card[] cards)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");

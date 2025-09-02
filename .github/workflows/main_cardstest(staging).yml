@@ -48,7 +48,7 @@ jobs:
         id: fa
         with:
           app-name: 'cardstest'
-          slot-name: 'staging'
           package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+          # slot-name: 'staging'
 
           
